@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name           Goodreads Fixes
+@namespace      https://github.com/astranomaly
+@version        0.1.0
+@description    Currently just removes images from reviews, but what more could you want?
+@author         The Outpost
+@license		MIT
+==/UserStyle== */
+@-moz-document domain("goodreads.com") {
+    .gr-hostedUserImg{display:none;}
+}

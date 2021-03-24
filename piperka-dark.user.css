@@ -1,0 +1,191 @@
+/* ==UserStyle==
+@name           Piperka Dark
+@namespace      https://github.com/astranomaly
+@version        0.1.0
+@description    A WIP theme for Piperka which adds dark mode, gives links extra room with plentiful padding, and otherwise seeks to make Piperka easier on the eyes.
+@author         The Outpost
+@license		MIT
+@preprocessor	default
+@var text	fontStackHead	"Heading Font Stack"	Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif
+@var text	fontStackBody	"Body Font Stack" 		Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif
+@var color	linkColor	"Link Color" 		#daae51
+@var color	backColor	"Background Color" 	#222
+@var color	listColor	"List Color" 		#3c3c3c
+@var color	updateHigh	"Frequent Updates" 	#3e4d38
+@var color	updateMid	"Occasional Updates" #443e26
+@var color	updateLow	"Few Updates" 		#573f3f
+@var color	hilight 	"Highlited" 		#957300
+==/UserStyle== */
+@-moz-document domain("piperka.net") {
+	* {
+		box-sizing: border-box;
+	}
+	a {
+		color: var(--linkColor);
+	}
+	a:hover {
+		color: gold;
+	}
+	p,
+	span {
+		color: #eee;
+	}
+	#navigation p,
+	#navigation span {
+		color: #111;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: white;
+		font-family: var(--fontStackHead);
+	}
+	body {
+		color: #aaa;
+		font-family: var(--fontStackBody);
+	}
+	#header .aa h1 {
+		font-size: 3em;
+		bottom: -22px;
+	}
+	body#site-p {
+		background-color: var(--backColor);
+	}
+	#site-p div.main {
+		background: var(--backColor);
+	}
+	#site-p .update-high {
+		background: #3e4d38;
+		background: linear-gradient(70deg, var(--listColor) 60%, var(--updateHigh) 90%);
+	}
+	#site-p .update-mid {
+		background: #443e26;
+		background: linear-gradient(70deg, var(--listColor) 60%, var(--updateMid) 90%);
+	}
+	#site-p .update-low {
+		background: #573f3f;
+		background: linear-gradient(70deg, var(--listColor) 60%, var(--updateLow) 90%);
+	}
+	#site-p .hilite {
+		background: linear-gradient(70deg, var(--listColor) 40%, var(--hilight) 90%);
+	}
+	#site-p .hilite button {
+		background: #dab21f;
+		color: #111;
+	}
+	.update-info {
+		background: rgba(0, 0, 0, 0.4);
+		padding: 3px 6px;
+		border-radius: 50px;
+	}
+	#piperka_list li {
+		padding: 0.2em 0.75em;
+		margin: 0.3em 0;
+		border-radius: 2px;
+		color: #979090;
+		position: relative;
+	}
+	#piperka_list li a {
+		color: #d0d0d0;
+		text-decoration: none;
+		font-weight: bold;
+		width: 100%;
+	}
+	.nsfw::after {
+		background: red;
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		content: "N";
+		color: white;
+		line-height: 8px;
+		position: absolute;
+		right: 10px;
+		top: 8px;
+	}
+	#expected-updates {
+		padding-left: 2em;
+	}
+	#site-p .hiliteBG,
+	#site-p div#maincornerback {
+		background: #111;
+		border-color: #111;
+	}
+	div.main {
+		padding-top: 1.6em;
+		color: darkseagreen;
+	}
+	#page-controls {
+		color: #aaa;
+	}
+	#sort_by a,
+	#page-controls a,
+	#readerchart ~ p > span {
+		text-decoration: none;
+		background: #111;
+		padding: 0.3em;
+		margin-left: 0.5em;
+		line-height: 2.2em;
+		border-radius: 4px;
+	}
+	#page-controls div,
+	#sort_by {
+		margin-bottom: 1em;
+	}
+	.sidebar .control a {
+		text-transform: uppercase;
+		text-decoration: none;
+		line-height: 1.5em;
+		padding-left: 0.5em
+	}
+	#newin {
+		color: darkseagreen;
+	}
+	.plus,
+	.minus,
+	.reject {
+		border-radius: 5px;
+		margin-right: 0.7em;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+		position: relative;
+		bottom: 2px;
+		color: white;
+		font-size: 0.9em;
+		cursor: pointer;
+	}
+	.plus {
+		background: darkseagreen;
+	}
+	.minus {
+		background: darkred;
+		box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
+	}
+	.paginate {
+		width: 100%;
+		display: flex;
+		padding: 0.5em 0;
+		background: #111;
+		margin-top: 0.7em;
+		justify-content: center;
+	}
+	.paginate a {
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 0 0.5em;
+		color: grey
+	}
+	.paginate a[href^="/"] {
+		color: var(--linkColor);
+	}
+	#footer {
+		margin-top: 2em;
+	}
+	#notmuch span,
+	#notmuch p,
+	#notmuch {
+		color: #111;
+	}
+}

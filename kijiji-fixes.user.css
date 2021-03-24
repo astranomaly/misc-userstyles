@@ -1,0 +1,98 @@
+/* ==UserStyle==
+@name           Kijiji Fixes
+@namespace      https://github.com/astranomaly
+@version        1.0.0
+@description    Adds dark mode and removes promoted content
+@author         The Outpost
+@license		MIT
+==/UserStyle== */
+@-moz-document domain("kijiji.ca") {
+	[class^=headerWrapper-],
+	[class^=searchSubmit-]:hover{
+		background-color: #222;
+	}
+	[class^=headerWrapper-] [class^=label-],
+	[class^=locationModalTrigger-],
+	[class^=searchSubmit-]{
+		background-color: #333;
+		color: #6060a4;
+		border-color: black;
+	}
+	[class^=headerWrapper-] [class^=label-]::after,
+	[class^=headerWrapper-] [class^=label-]::before{
+		background-color: black;
+	}
+	/* Main Page	 */
+	[class*=top-feature],
+	[id*=InlineBanner],
+	#AFSTop,
+	.srp-bottom-links,
+	[class^=shareLinkBar-]{
+		display: none;
+	}
+	html body,
+	html #PageSRP .container-results,
+	html #PageSRP .container-results .top-bar,
+	[class^=container-],
+	html #PageSRP .bottom-bar,
+	html #PageSRP .container-primary,
+	html #PageSRP .container-primary header,
+	.container-results .highlight,
+	html #PageSRP .srp-navigation ul li.highlight,
+	[class^=input-]{
+		background: #444;
+		color: #ddd;
+		border-color: #222;
+	}
+	html #PageSRP .container-results table{
+		border: solid 1px #222;
+	}
+	html #PageSRP .container-results table .description a,
+	html #PageSRP .srp-navigation ul li a,
+	html .breadcrumb a{
+		color: #cfbf63;
+		text-decoration: none;
+	}
+	html #PageSRP .container-results table .description a{
+		font-size: 1rem;
+	}
+	html #PageSRP .container-results table .description a:visited{
+		color: black;
+	}
+	html #PageSRP .container-results table.third-party .description a{
+		color: grey;
+	}
+	container-results table.hover,
+	html #PageSRP .container-results table.hover{
+		background: #222;
+	}
+	html #PageSRP .container-primary hr{
+		border-color: black;
+	}
+	/* Listings	 */
+	[class^=page-]{
+		color:#ddd;
+	}
+	[class^=title-]{
+		color: #cfbf63;
+	}
+	[class^=address],
+	[class^=crumb]{
+		color: #aaa;
+	}
+	[class^=r2s],
+	[class^=favouriteButton-],
+	[class^=reportAdButton-]
+	{
+		background: #555;
+		color: #eee;
+		border-color: #222;
+	}
+	[class^=fadeOut]{
+		background: linear-gradient(180deg,hsla(0,0%,100%,0) 0,#444 85%);
+	}
+	[class^=heroImage-]{
+		background-color: #222;
+		border-color: black;
+	}
+}
